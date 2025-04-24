@@ -1,0 +1,11 @@
+hr.divider {
+  height: 0.3rem;
+  max-width: 10rem;
+  margin: 1.1rem auto;
+  background-color: $primary;
+  border: 0;
+  opacity: 1;
+}
+hr.divider-left {
+  margin-left: 0;
+}
