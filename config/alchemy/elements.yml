@@ -4,8 +4,12 @@
 
 - name: article
   hint: true
-  unique: true
+  # unique: true
   ingredients:
+    - role: align
+      type: Select
+      settings:
+        select_values: ['left', 'center', 'right']
     - role: headline
       type: Text
       default: :article_headline
@@ -17,3 +21,46 @@
       type: Richtext
       default: :article_text
       hint: true
+
+- name: box_collection
+  ingredients:
+    - role: box_align
+      type: Select
+      settings:
+        select_values: ['left', 'center', 'right']
+    - role: text_align
+      type: Select
+      settings:
+        select_values: ['left', 'center', 'right']
+    - role: headline
+      type: Text
+  nestable_elements:
+    - box
+
+- name: box
+  hint: true
+  unique: false
+  ingredients:
+    - role: headline
+      type: Text
+      default: :box_headline
+      hint: true
+    - role: picture
+      type: Picture
+      hint: true
+    - role: text
+      type: Richtext
+      default: :article_text
+      hint: true
+
+- name: color_section
+  ingredients:
+    - role: color
+      type: Text
+      settings:
+        input_type: color
+
+  nestable_elements:
+    - article
+    - box
+    - box_collection

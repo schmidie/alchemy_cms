@@ -1,0 +1,8 @@
+/ we want some space for the next element
+.pb-5
+  - cache(color_section) do
+    = element_view_for(color_section) do |el|
+      .row.p-4[style="background-color: #{el.render(:color)}"]
+        .col-12
+          = el.render(:headline)
+          = render color_section.nested_elements.published

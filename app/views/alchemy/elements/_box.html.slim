@@ -1,0 +1,19 @@
+- cache(box) do
+  = element_view_for(box) do |el|
+    .card.border-primary.h-100
+      / img.p-5.card-img-top
+      = el.render(:picture)
+      .card-body.d-flex.flex-column
+        .mt-auto
+          h5.card-title
+            = el.render(:headline)
+          / h6.card-subtitle.mb-2.text-body-secondary 
+          /   | SUBTITLE
+          p.card-text
+            = el.render(:text)
+      .card-footer
+        small.text-body-secondary
+          .text-end
+            = link_to "/" do
+              i.bi.bi-arrow-right-square-fill>
+              | read more

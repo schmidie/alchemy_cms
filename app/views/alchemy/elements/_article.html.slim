@@ -1,7 +1,7 @@
-.row
-  .col
-    - cache(article) do
-      = element_view_for(article, tag: 'article') do |el|
+- cache(article) do
+  = element_view_for(article, tag: 'article') do |el|
+    .row[style="text-align: #{el.render(:align)} !important; justify-content: #{el.render(:align)} !important;"]
+      .col
         h2
           = el.render :headline
         = el.render :picture, size: '1200x600'

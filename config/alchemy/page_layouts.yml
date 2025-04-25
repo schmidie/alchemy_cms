@@ -3,6 +3,6 @@
 # For further information please see http://guides.alchemy-cms.com/stable/page_layouts.html
 
 - name: index
-  unique: true
-  elements: [article]
+  unique: false
+  elements: [article, box_collection, color_section]
   autogenerate: [article]
