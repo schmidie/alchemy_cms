@@ -1,0 +1,9 @@
+/ we want some space for the next element
+.pb-5
+  - cache(bg_image_section) do
+    = element_view_for(bg_image_section) do |el|
+      / - if el.picture.present?
+      .row.p-4.bgimage[style="background: url('#{bg_image_section.ingredient_by_role('picture').picture&.url}');"]
+        .col-12
+          = render bg_image_section.nested_elements.published
+

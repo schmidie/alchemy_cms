@@ -2,6 +2,6 @@
   .col
     - cache(box_collection) do
       = element_view_for(box_collection) do |el|
-        h3= el.render(:headline)
+        / h3= el.render(:headline)
         .row.row-cols-1.row-cols-md-5.g-4[style="text-align: #{el.render(:text_align)} !important; justify-content: #{el.render(:box_align)} !important;"]
           = render box_collection.nested_elements.published

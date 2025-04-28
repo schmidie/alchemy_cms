@@ -4,5 +4,5 @@
 
 - name: index
   unique: false
-  elements: [article, box_collection, color_section]
+  elements: [article, box_collection, color_section, bg_image_section]
   autogenerate: [article]

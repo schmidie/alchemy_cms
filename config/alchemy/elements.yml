@@ -62,5 +62,13 @@
 
   nestable_elements:
     - article
-    - box
+    - box_collection
+
+- name: bg_image_section
+  ingredients:
+    - role: picture
+      type: Picture
+      hint: true
+  nestable_elements:
+    - article
     - box_collection
