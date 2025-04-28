@@ -1,21 +1,25 @@
-nav#mainNav.navbar.navbar-expand-lg.navbar-light.bg-body-tertiary.fixed-top.py-2
-  .container-fluid.px-4.px-lg-5
-
+nav#mainNav.navbar.navbar-expand-lg.navbar-light.bg-body-tertiary.py-2.d-flex.justify-content-center.sticky-top.py-2
+  .container-fluid.px-5.px-lg-5
     .text-start
       h4
         a.button.btn.btn-outline-dark href="tel:+491791451810"
-          i.bi.bi-telephone-fill
-          b= " +49 179 145 181 0"
-    
-    a.navbar-brand[href="/"]
-      | Tobias Schmid 
-      span.px-2
-      = " | "
-      span.px-2
-      | tschmid.io
-
+          .d-lg-none
+            i.bi.bi-telephone-fill
+          .d-none.d-lg-block
+            i.bi.bi-telephone-fill
+            b= " +49 179 145 181 0"
+    .text-center
+      div.h4[href="/"]
+        | tschmid.io 
+      button.navbar-toggler aria-controls="navbarSupportedContent" aria-expanded="false" aria-label=("Toggle navigation") data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button"
+        span.navbar-toggler-icon
+      #navbarSupportedContent.collapse.navbar-collapse.pt-3
+        = render_menu('main_menu')
     .text-end
       h4
         a.button.btn.btn-outline-dark href="mailto:hi@tschmid.io"
-          i.bi.bi-envelope-fill
-          b= " hi@tschmid.io"
+          .d-lg-none
+            i.bi.bi-envelope-fill
+          .d-none.d-lg-block
+            i.bi.bi-envelope-fill
+            b= " hi@tschmid.io"

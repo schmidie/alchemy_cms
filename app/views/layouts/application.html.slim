@@ -25,10 +25,7 @@ html
     = yield :head
     
   body.min-vh-100.d-flex.flex-column
-    .d-lg-none
-      = render 'partials/navbar_mobile'
-    .d-none.d-lg-block
-      = render 'partials/navbar'
+    = render 'partials/navbar'
     
     .container-fluid.flex-grow-1.pb-5
       .row.justify-content-center.text-center

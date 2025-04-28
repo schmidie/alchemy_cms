@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  mount Alchemy::Engine, at: '/'
+  mount Alchemy::Engine, at: "/"
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
