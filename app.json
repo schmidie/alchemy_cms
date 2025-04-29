@@ -2,7 +2,7 @@
   "name": "CMS",
   "scripts": {
     "dokku": {
-      "postdeploy": "bin/rails db:migrate && bin/rails db:seed"
+      "postdeploy": "bin/rails db:prepare && bin/rails db:migrate && bin/rails db:seed"
     }
   },
   "env": {
