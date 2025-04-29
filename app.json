@@ -1,5 +1,5 @@
 {
-  "name": "Scheibner Cloud",
+  "name": "CMS",
   "scripts": {
     "dokku": {
       "postdeploy": "bin/rails db:migrate && bin/rails db:seed"

@@ -4,9 +4,6 @@ source "https://rubygems.org"
 gem "rails", "~> 8.0.2"
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
 gem "propshaft"
-# Use sqlite3 as the database for Active Record
-# gem "sqlite3", ">= 2.1"
-gem "pg"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
 # Bundle and transpile JavaScript [https://github.com/rails/jsbundling-rails]
@@ -50,6 +47,11 @@ gem "alchemy-devise", "~> 7.4"
 # template in slime are just nice
 gem "slim", "~> 5.2"
 
+group :production, :development do
+  # use postgres ind production and development
+  gem "pg"
+end
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
@@ -70,4 +72,6 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
+  # Use sqlite3 as the database for Active Record in test
+  gem "sqlite3", ">= 2.1"
 end
