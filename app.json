@@ -1,0 +1,14 @@
+{
+  "name": "Scheibner Cloud",
+  "scripts": {
+    "dokku": {
+      "postdeploy": "bin/rails db:migrate && bin/rails db:seed"
+    }
+  },
+  "env": {
+    "RAILS_ENV": "production",
+    "RACK_ENV": "production",
+    "RAILS_SERVE_STATIC_FILES": "true"
+  },
+  "addons": ["heroku-postgresql"]
+}
