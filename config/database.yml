@@ -25,21 +25,18 @@ default_sqlite: &default_sqlite
   timeout: 5000
 
 development:
-  primary:
+  primary: &primary_development
     <<: *default
     database: cms_development
   cache:
-    <<: *default_sqlite
-    database: storage/cms_development_cache.sqlite3
-    migrations_paths: db/cache_migrate
+    <<: *primary_development
+    # migrations_paths: db/cache_migrate
   queue:
-    <<: *default_sqlite
-    database: storage/cms_development_queue.sqlite3
-    migrations_paths: db/queue_migrate
+    <<: *primary_development
+    # migrations_paths: db/queue_migrate
   cable:
-    <<: *default_sqlite
-    database: storage/cms_development_cable.sqlite3
-    migrations_paths: db/cable_migrate
+    <<: *primary_development
+    # migrations_paths: db/cable_migrate
 
   # The specified database role being used to connect to PostgreSQL.
   # To create additional roles in PostgreSQL see `$ createuser --help`.
@@ -95,19 +92,18 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
+# We use one Database for all (also solid)
+# as the project growth, it should be splitted again in seperat DBs
 production:
   primary: &primary_production
     <<: *default
-    database: staging-tschmid-db
+    url: <%= ENV["DATABASE_URL"] %>
   cache:
-    <<: *default_sqlite
-    database: storage/cms_production_cache.sqlite3
-    migrations_paths: db/cache_migrate
+    <<: *primary_production
+    # migrations_paths: db/cache_migrate
   queue:
-    <<: *default_sqlite
-    database: storage/cms_production_queue.sqlite3
-    migrations_paths: db/queue_migrate
+    <<: *primary_production
+    # migrations_paths: db/queue_migrate
   cable:
-    <<: *default_sqlite
-    database: storage/cms_production_cable.sqlite3
-    migrations_paths: db/cable_migrate
+    <<: *primary_production
+    # migrations_paths: db/cable_migrate
