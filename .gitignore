@@ -38,7 +38,19 @@
 
 /node_modules
 
-/uploads/
+uploads/*
+!uploads/attachments/
+!uploads/pictures/
+!uploads/.keep
+
+uploads/attachments/*
+!uploads/attachments/.keep
+
+uploads/pictures/*
+!uploads/pictures/.keep
+
+# !/uploads/pictures/.keep
+
 /public/pictures
 .DS_Store
 /db/*.sqlite3
