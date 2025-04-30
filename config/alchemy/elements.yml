@@ -17,8 +17,8 @@
     - role: picture
       type: Picture
       hint: true
-      settings:
-        crop: true
+      # settings:
+      #   crop: true
     - role: text
       type: Richtext
       default: :article_text
