@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   #
 
   mount Alchemy::Engine, at: "/"
+  mount MissionControl::Jobs::Engine, at: "/jobs"
 end
