@@ -1,1 +1,1 @@
-web: bin/rails server -p 5000
+web: bundle exec puma -C config/puma.rb
