@@ -9,7 +9,7 @@
     "RAILS_ENV": "production",
     "RACK_ENV": "production",
     "RAILS_SERVE_STATIC_FILES": "true",
-    "SOLID_QUEUE_IN_PUMA": "true",
+    "SOLID_QUEUE_IN_PUMA": "false",
     "JOB_CONCURRENCY": 3
 
   },
