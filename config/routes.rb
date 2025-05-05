@@ -13,6 +13,6 @@ Rails.application.routes.draw do
   # root "posts#index"
   #
 
-  mount Alchemy::Engine, at: "/"
   mount MissionControl::Jobs::Engine, at: "/jobs"
+  mount Alchemy::Engine, at: "/"
 end
