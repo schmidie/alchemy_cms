@@ -6,6 +6,11 @@
   hint: true
   # unique: true
   ingredients:
+    - role: topspace
+      type: Select
+      default: '0'
+      settings:
+        select_values: ['0', '1', '2', '3', '4', '5']
     - role: align
       type: Select
       settings:
@@ -26,6 +31,11 @@
 
 - name: box_collection
   ingredients:
+    - role: topspace
+      type: Select
+      default: '0'
+      settings:
+        select_values: ['0', '1', '2', '3', '4', '5']
     - role: box_align
       type: Select
       settings:
@@ -51,7 +61,7 @@
       type: Picture
       hint: true
       settings:
-        crop: true
+        # crop: true
     - role: text
       type: Richtext
       default: :article_text
@@ -59,6 +69,11 @@
 
 - name: color_section
   ingredients:
+    - role: topspace
+      type: Select
+      default: '0'
+      settings:
+        select_values: ['0', '1', '2', '3', '4', '5']
     - role: color
       type: Text
       settings:
@@ -70,11 +85,16 @@
 
 - name: bg_image_section
   ingredients:
+    - role: topspace
+      type: Select
+      default: '0'
+      settings:
+        select_values: ['0', '1', '2', '3', '4', '5']
     - role: picture
       type: Picture
       hint: true
       settings:
-        crop: true
+        # crop: true
   nestable_elements:
     - article
     - box_collection

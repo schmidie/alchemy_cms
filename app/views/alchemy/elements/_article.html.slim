@@ -1,6 +1,6 @@
 - cache(article) do
   = element_view_for(article, tag: 'article') do |el|
-    .row[style="text-align: #{el.render(:align)} !important; justify-content: #{el.render(:align)} !important;"]
+    .row[style="text-align: #{el.render(:align)} !important; justify-content: #{el.render(:align)} !important;" class="pt-#{el.render(:topspace)}"]
       .col
         h2
           = el.render :headline
