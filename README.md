@@ -78,9 +78,9 @@ You need to setup
 
 * mount storage (or setup S3)
   ``` sh
-  dokku storage:mount yourapp /var/lib/dokku/data/storage/staging-tschmid/log:/app/log
-  dokku storage:mount yourapp /var/lib/dokku/data/storage/staging-tschmid/storage:/app/storage
-  dokku storage:mount yourapp /var/lib/dokku/data/storage/staging-tschmid/uploads:/app/uploads
+  dokku storage:mount yourapp /var/lib/dokku/data/storage/yourapp/log:/app/log
+  dokku storage:mount yourapp /var/lib/dokku/data/storage/yourapp/storage:/app/storage
+  dokku storage:mount yourapp /var/lib/dokku/data/storage/yourapp/uploads:/app/uploads
   ```
 
 * make sure that all storage directories (and sub directories) have correct permission. if the owner is not 32767:32767 you can change it with:
