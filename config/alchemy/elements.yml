@@ -12,7 +12,6 @@
         select_values: ['left', 'center', 'right']
     - role: headline
       type: Text
-      default: :article_headline
       hint: true
     - role: picture
       type: Picture
@@ -67,6 +66,7 @@
   nestable_elements:
     - article
     - box_collection
+    - title_image_section
 
 - name: bg_image_section
   ingredients:
@@ -78,3 +78,33 @@
   nestable_elements:
     - article
     - box_collection
+
+- name: title_image_section
+  ingredients:
+    - role: responsive_image
+      type: Boolean
+      default: 'true'
+    - role: rounded_image
+      type: Boolean
+      default: 'true'
+    - role: thumbnail_image
+      type: Boolean
+      default: 'false'
+    - role: image_order_first
+      type: Boolean
+      default: 'true'
+    - role: image_order_second_on_desktop
+      type: Boolean
+      default: 'false'
+    - role: topspace
+      type: Select
+      default: '0'
+      settings:
+        select_values: ['0', '1', '2', '3', '4', '5']
+    - role: picture
+      type: Picture
+      hint: true
+      settings:
+        # crop: true
+  nestable_elements:
+    - article

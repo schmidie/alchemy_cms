@@ -1,0 +1,21 @@
+- cache(title_image_section) do
+  = element_view_for(title_image_section) do |el|
+    .row.pt-5
+      .col-12.col-lg-6
+        .py-5.text-start
+          = render title_image_section.nested_elements.published
+      .col-12.col-lg-6.justify-content-center.text-center[
+        class="#{el.render(:image_order_first) == 'True' ? "order-first" : ""}\
+          #{el.render(:image_order_second_on_desktop) == 'True' ? "order-lg-1" : ""}"
+        ]
+        img[
+          src="#{title_image_section.ingredient_by_role('picture').picture&.url}"
+          class="#{el.render(:responsive_image) == 'True' ? "img-fluid" : ""}\
+            #{el.render(:rounded_image) == 'True' ? "rounded-circle" : ""}\
+            #{el.render(:thumbnail_image) == 'True' ? "img-thumbnail" : ""}"
+        ]
+
+
+
+
+
