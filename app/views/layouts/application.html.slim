@@ -22,6 +22,7 @@ html
     = stylesheet_link_tag "application", "data-turbo-track": "reload"
     = javascript_include_tag "application", "data-turbo-track": "reload", type: "module"
 
+    = render 'partials/google_analytics_and_consent_management'
     = yield :head
     
   body.min-vh-100.d-flex.flex-column
