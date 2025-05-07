@@ -1,0 +1,11 @@
+/ Google Analytics
+script[ async src="https://www.googletagmanager.com/gtag/js?id=#{Rails.application.credentials.gtag.try(:[],:id)}" type="text/plain" data-type="application/javascript" data-name="google-analytics"]
+script [ type="text/plain" data-type="application/javascript" data-name="google-analytics"]
+  | window.dataLayer = window.dataLayer || []; 
+  | function gtag(){dataLayer.push(arguments);} 
+  | gtag('js', new Date()); 
+  | gtag('config', "#{Rails.application.credentials.gtag.try(:[],:id)}"); 
+
+/ consent management with klaro
+= javascript_include_tag "klaro.config", defer: true
+= javascript_include_tag "klaro", defer: true
